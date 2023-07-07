@@ -10,4 +10,4 @@ spring:
 
 stock:
    transportType: air
-   slaDays: 90
+   slaDays: 60
