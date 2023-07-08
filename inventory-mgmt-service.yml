@@ -15,15 +15,16 @@ stock:
 ...
 ---
 spring:
- profiles: test
- datasource:
-  driver-class-name: com.mysql.cj.jdbc.Driver
-  url: jdbc:mysql://localhost:3306/inventorymgmtdb
-  username: root
-  password: MyNewPass
+  profiles: test
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: 'jdbc:mysql://localhost:3306/inventorymgmtdb'
+    username: root
+    password: MyNewPass
   jpa:
     show-sql: true
     generate-ddl: false
 stock:
-   transportType: road-ways
-   slaDays: 300
+  transportType: air
+  slaDays: 3
+...
