@@ -1,3 +1,4 @@
+---
 spring:
   profiles:
     active: dev
@@ -11,4 +12,37 @@ spring:
     generate-ddl: false
 stock:
    transportType: air
-   slaDays: 3
+   slaDays: 50
+...
+---
+spring:
+  profiles:
+    active: test
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/inventorymgmtdb
+    username: root
+    password: MyNewPass
+  jpa:
+    show-sql: true
+    generate-ddl: false
+stock:
+   transportType: air
+   slaDays: 100
+...
+---
+spring:
+  profiles:
+    active: itf
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/inventorymgmtdb
+    username: root
+    password: MyNewPass
+  jpa:
+    show-sql: true
+    generate-ddl: false
+stock:
+   transportType: air
+   slaDays: 200
+...
